@@ -14,7 +14,18 @@ Faire dans la console les commandes suivantes :
 
 ![](/assets/img/changer-la-couleur-du-texte.png)
 
+aMettreEnRouge = document.querySelector("#a-mettre-en-rouge")
+<p id=​"a-mettre-en-rouge">​…​</p>​
+aMettreEnRouge.style.color = "red"
+'red'
+
 ### Réagir à un click
+enRougeSuiteAClick = document.querySelector("#en-rouge-suite-a-click")
+<button id=​"en-rouge-suite-a-click">​En rouge suite à un click​</button>​
+enRougeSuiteAClick.addEventListener("click", (evt)=>{
+    enRougeSuiteAClick.style.color = "red"
+});
+undefined
 
 Faire dans la console les commandes suivantes :
 
@@ -25,6 +36,13 @@ Testez en cliquant sur le bouton.
 ## Collections d'éléments
 
 ### Trouvez tous les 'H2' du document
+collH2 = document.querySelectorAll("h2")
+NodeList(3) [h2, h2, h2]
+collH2.forEach((elm)=>{
+    elm.addEventListener("click", (evt)=>{
+        evt.target.style.color = "red";
+    });
+});
 
 - Puis pour chacun,
   - suite à un click,
